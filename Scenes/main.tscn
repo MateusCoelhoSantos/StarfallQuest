@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnyenyotp7q7h"]
+[gd_scene load_steps=4 format=3 uid="uid://dnyenyotp7q7h"]
 
 [ext_resource type="PackedScene" uid="uid://c1uu2c4djui3d" path="res://Scenes/Level2.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://filrsela105u" path="res://Scenes/Level1.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dfg4xde47u6ug" path="res://Actors/player.tscn" id="3_dku4y"]
 
-[node name="World" type="Node2D"]
+[node name="main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("3_dku4y")]
-position = Vector2(44, 242)
+position = Vector2(117, 91)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_bo1nx")]
+
+[node name="BG" parent="." instance=ExtResource("3_8gbba")]
+visible = false
