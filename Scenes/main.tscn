@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnyenyotp7q7h"]
+
+[ext_resource type="PackedScene" uid="uid://c1uu2c4djui3d" path="res://Scenes/Level2.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dfg4xde47u6ug" path="res://Actors/player.tscn" id="3_dku4y"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("3_dku4y")]
+position = Vector2(44, 242)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_bo1nx")]

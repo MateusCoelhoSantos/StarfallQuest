@@ -1,0 +1,181 @@
+[gd_scene load_steps=33 format=3 uid="uid://dfg4xde47u6ug"]
+
+[ext_resource type="Script" uid="uid://qjfydt2tbj20" path="res://Scripts/Player.gd" id="1_hhvu8"]
+[ext_resource type="Texture2D" uid="uid://xtnitj4y4j2x" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-idle-00.png" id="2_g1sy3"]
+[ext_resource type="Texture2D" uid="uid://bb0lryu63wp3n" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-idle-01.png" id="3_bm10n"]
+[ext_resource type="Texture2D" uid="uid://07rieps5bhd6" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-idle-02.png" id="4_0qdo0"]
+[ext_resource type="Texture2D" uid="uid://dd0ad63e854q6" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-idle-03.png" id="5_6tnwr"]
+[ext_resource type="Texture2D" uid="uid://bb751tb2rupej" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-run-00.png" id="6_wqlit"]
+[ext_resource type="Texture2D" uid="uid://bn8ktc7mgy3cb" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-run-01.png" id="7_peyl7"]
+[ext_resource type="Texture2D" uid="uid://ctixs0s4sn3bh" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-run-02.png" id="8_kb0pb"]
+[ext_resource type="Texture2D" uid="uid://j1ov7rudr7st" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-run-03.png" id="9_8yp67"]
+[ext_resource type="Texture2D" uid="uid://cewxviemjpetl" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-run-04.png" id="10_5iocm"]
+[ext_resource type="Texture2D" uid="uid://ijvyhkl62mhb" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-run-05.png" id="11_aumcn"]
+[ext_resource type="Texture2D" uid="uid://d3rvb7ega38py" path="res://Assets/Personagem Starfall/Adventurer-1.5/Individual Sprites/adventurer-fall-01.png" id="11_orya6"]
+[ext_resource type="Texture2D" uid="uid://d4a18dox6qnhn" path="res://Assets/Personagem Starfall/Adventurer-1.5/Individual Sprites/adventurer-fall-00.png" id="12_12hnm"]
+[ext_resource type="Texture2D" uid="uid://dadisiy685lni" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-fall-00.png" id="12_gdggh"]
+[ext_resource type="Texture2D" uid="uid://6kqsdc2bp5ex" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-fall-01.png" id="13_86w7c"]
+[ext_resource type="Texture2D" uid="uid://dim7d2euyltet" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-jump-01.png" id="15_7tkad"]
+[ext_resource type="Texture2D" uid="uid://fnjbnk6jn0x1" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-jump-02.png" id="16_oekjt"]
+[ext_resource type="Texture2D" uid="uid://b0mvn843hb30w" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-jump-03.png" id="17_cu7qa"]
+[ext_resource type="Texture2D" uid="uid://boyji8h11s1ru" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-crnr-jmp-00.png" id="18_5k348"]
+[ext_resource type="Texture2D" uid="uid://cpi3pxehkffkb" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-crnr-jmp-01.png" id="19_a7nbo"]
+[ext_resource type="Texture2D" uid="uid://14v1c40t21cn" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-crnr-jmp-02.png" id="20_t1hy1"]
+[ext_resource type="Texture2D" uid="uid://duwrnrsl43m8m" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-slide-00.png" id="21_yj4wq"]
+[ext_resource type="Texture2D" uid="uid://sjkqdyl4wp8j" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-slide-01.png" id="22_627xd"]
+[ext_resource type="Texture2D" uid="uid://4i8eipjpmkyy" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-stand-00.png" id="23_rmlse"]
+[ext_resource type="Texture2D" uid="uid://d2oei3uj1e1np" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-stand-01.png" id="24_03oth"]
+[ext_resource type="Texture2D" uid="uid://bf22fl4waoysp" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-stand-02.png" id="25_j4apf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lscqu"]
+atlas = ExtResource("2_g1sy3")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5hkx"]
+atlas = ExtResource("3_bm10n")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5eo8b"]
+atlas = ExtResource("4_0qdo0")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndiqk"]
+atlas = ExtResource("5_6tnwr")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vftnq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_gdggh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_86w7c")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lscqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5hkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5eo8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndiqk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_7tkad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oekjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cu7qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_orya6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_12hnm")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_5k348")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_a7nbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_t1hy1")
+}],
+"loop": true,
+"name": &"long_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wqlit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_peyl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kb0pb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8yp67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5iocm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_aumcn")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_yj4wq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_627xd")
+}],
+"loop": true,
+"name": &"slide",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_rmlse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_03oth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j4apf")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i8wdj"]
+radius = 7.0
+height = 28.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 3
+script = ExtResource("1_hhvu8")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vftnq")
+animation = &"jump"
+autoplay = "idle"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(2, 4)
+shape = SubResource("CapsuleShape2D_i8wdj")
+
+[node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+drag_vertical_enabled = true
+
+[node name="animator" type="AnimationPlayer" parent="."]

@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://c1uu2c4djui3d"]
+
+[ext_resource type="Texture2D" uid="uid://brtkghq30op8g" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="1_3uwo0"]
+[ext_resource type="Script" uid="uid://bkrre2k5y5l0f" path="res://Scripts/Level2.gd" id="1_ehjmi"]
+[ext_resource type="Texture2D" uid="uid://cniqb7608y4ak" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="2_61hrt"]
+[ext_resource type="Texture2D" uid="uid://cy3vfqygyy1wm" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="3_5oes4"]
+[ext_resource type="Texture2D" uid="uid://cwbtnbc4tcnnb" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="4_xvngs"]
+[ext_resource type="Texture2D" uid="uid://dg8h7hmdfk6xy" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="5_n30lp"]
+[ext_resource type="Texture2D" uid="uid://du6ew3fwlukwc" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="6_dar8o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehjmi"]
+size = Vector2(16.5879, 34)
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_ehjmi")
+
+[node name="05" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="05"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_3uwo0")
+centered = false
+
+[node name="04" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="04"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_61hrt")
+centered = false
+
+[node name="03" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="03"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_5oes4")
+centered = false
+
+[node name="02" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="02"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("4_xvngs")
+centered = false
+
+[node name="01" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="01"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_n30lp")
+centered = false
+
+[node name="00" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.11, 1)
+motion_mirroring = Vector2(432, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="00"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("6_dar8o")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(432.5, 314)
+scale = Vector2(52.3876, -2.1773)
+shape = SubResource("RectangleShape2D_ehjmi")
