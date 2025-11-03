@@ -15,7 +15,7 @@ shader = ExtResource("3_xu24m")
 shader_parameter/move_speed = 0.05
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ysn8j"]
-size = Vector2(864, 19)
+size = Vector2(432, 19)
 
 [node name="BG" type="ParallaxBackground"]
 script = ExtResource("1_cjc6m")
@@ -70,5 +70,5 @@ centered = false
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(432, 299)
+position = Vector2(216, 299)
 shape = SubResource("RectangleShape2D_ysn8j")

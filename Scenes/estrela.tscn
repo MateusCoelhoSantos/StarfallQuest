@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://c33iyywwmbqhc"]
+
+[ext_resource type="Script" uid="uid://cnxwr3x053gcw" path="res://Scripts/estrela.gd" id="1_7tuio"]
+[ext_resource type="Texture2D" uid="uid://h3rd8ml6ev0t" path="res://Assets/S001_nyknck.png" id="1_klwmx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tuio"]
+atlas = ExtResource("1_klwmx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjr0q"]
+atlas = ExtResource("1_klwmx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bb0q"]
+atlas = ExtResource("1_klwmx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4d5w"]
+atlas = ExtResource("1_klwmx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o042o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tuio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjr0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2bb0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4d5w")
+}],
+"loop": true,
+"name": &"Pisca",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rd87u"]
+radius = 7.0
+
+[node name="Estrela" type="Area2D"]
+script = ExtResource("1_7tuio")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o042o")
+animation = &"Pisca"
+autoplay = "Pisca"
+frame_progress = 0.788951
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rd87u")

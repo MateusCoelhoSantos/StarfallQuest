@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://cfop5k06rvca8"]
+
+[ext_resource type="Script" uid="uid://c5kred2p0hk3c" path="res://Scripts/olho_voador.gd" id="1_4vp5c"]
+[ext_resource type="Texture2D" uid="uid://b2j82xxqpxxsr" path="res://Assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Flying eye/Flight.png" id="1_mrxad"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vp5c"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20ub8"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bipf5"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy8vt"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vr8xw"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sekas"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_desxg"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0roxw"]
+atlas = ExtResource("1_mrxad")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p24tr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vp5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20ub8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bipf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy8vt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vr8xw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sekas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_desxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0roxw")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1fy1"]
+size = Vector2(30, 17)
+
+[node name="OlhoVoador" type="Area2D"]
+script = ExtResource("1_4vp5c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p24tr")
+animation = &"Fly"
+autoplay = "Fly"
+frame_progress = 0.484318
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 3.5)
+shape = SubResource("RectangleShape2D_m1fy1")

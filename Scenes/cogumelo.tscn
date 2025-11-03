@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://4b220l7cr0mi"]
+
+[ext_resource type="Script" uid="uid://bbs5yk76blc48" path="res://Scripts/cogumelo.gd" id="1_1b2b2"]
+[ext_resource type="Texture2D" uid="uid://bjbynspfdejbc" path="res://Assets/Monsters_Creatures_Fantasy/Monsters_Creatures_Fantasy/Mushroom/Run.png" id="1_ksfoh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1b2b2"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cakr6"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c76ij"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_popps"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5lt3"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knxg7"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8wvo"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nd22v"]
+atlas = ExtResource("1_ksfoh")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_er0ni"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1b2b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cakr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c76ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_popps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5lt3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knxg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8wvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nd22v")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfh1m"]
+height = 34.0
+
+[node name="Cogumelo" type="Area2D"]
+script = ExtResource("1_1b2b2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_er0ni")
+animation = &"Run"
+autoplay = "Run"
+frame_progress = 0.162492
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CapsuleShape2D_tfh1m")

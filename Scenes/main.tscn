@@ -1,15 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnyenyotp7q7h"]
+[gd_scene load_steps=6 format=3 uid="uid://dnyenyotp7q7h"]
 
+[ext_resource type="Script" uid="uid://ct16s1vkbqv33" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://c1uu2c4djui3d" path="res://Scenes/Level2.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://filrsela105u" path="res://Scenes/Level1.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dfg4xde47u6ug" path="res://Actors/player.tscn" id="3_dku4y"]
+[ext_resource type="Script" uid="uid://bajtccy3avhu4" path="res://Scripts/spawn_manager.gd" id="5_kry3j"]
 
 [node name="main" type="Node2D"]
+script = ExtResource("1_jjvhh")
 
 [node name="Player" parent="." instance=ExtResource("3_dku4y")]
-position = Vector2(117, 91)
+position = Vector2(66, 219)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("2_bo1nx")]
 
 [node name="BG" parent="." instance=ExtResource("3_8gbba")]
 visible = false
+
+[node name="SpawnManager" type="Node2D" parent="."]
+script = ExtResource("5_kry3j")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="SpawnManager" method="_on_spawn_timer_timeout"]
