@@ -5,11 +5,11 @@ const OBSTACULO = preload("res://Scenes/obstaculo.tscn")
 const OLHO_VOADOR = preload("res://Scenes/olho_voador.tscn")
 const ESTRELA = preload("res://Scenes/estrela.tscn")
 
-const ground_y = 255
-const obstaculo_y = 265
-const flying_min_y = 255
-const flying_max_y = 200
-const estrela_y = 265
+const ground_y = 170
+const obstaculo_y = 185
+const flying_min_y = 140
+const flying_max_y = 90
+const estrela_y = 175
 
 func spawn_object():
 	var random_number = randi() % 100

@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvxk1v8wggwv6"]
+
+[ext_resource type="FontFile" uid="uid://dbhk66eyst1bt" path="res://Assets/Fontes/RevMiniPixel.ttf" id="1_cjp3p"]
+[ext_resource type="Script" uid="uid://cqi6vrppcdlbo" path="res://Scripts/fimde_jogo_layer.gd" id="1_naj0d"]
+[ext_resource type="Texture2D" uid="uid://do40j6dcurm4q" path="res://Assets/restart_icon.png" id="2_naj0d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n3vlf"]
+font = ExtResource("1_cjp3p")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hkqp"]
+font = ExtResource("1_cjp3p")
+
+[sub_resource type="LabelSettings" id="LabelSettings_skrmu"]
+font = ExtResource("1_cjp3p")
+
+[node name="FimdeJogoLayer" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_naj0d")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="LabelTittle" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 29.0
+offset_right = 288.0
+offset_bottom = 80.0
+text = "FIM DE JOGO"
+label_settings = SubResource("LabelSettings_n3vlf")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelScore" type="Label" parent="."]
+offset_left = -1.0
+offset_top = 122.0
+offset_right = 288.0
+offset_bottom = 145.0
+text = "Score: "
+label_settings = SubResource("LabelSettings_1hkqp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelRecord" type="Label" parent="."]
+offset_top = 147.0
+offset_right = 288.0
+offset_bottom = 170.0
+text = "Recorde:"
+label_settings = SubResource("LabelSettings_skrmu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(139, 92)
+scale = Vector2(2, 2)
+texture = ExtResource("2_naj0d")

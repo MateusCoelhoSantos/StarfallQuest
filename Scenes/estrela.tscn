@@ -42,14 +42,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_rd87u"]
 radius = 7.0
 
-[node name="Estrela" type="Area2D"]
+[node name="Estrela" type="Area2D" groups=["Collectible"]]
 script = ExtResource("1_7tuio")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o042o")
 animation = &"Pisca"
 autoplay = "Pisca"
-frame_progress = 0.788951
+frame_progress = 0.263094
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

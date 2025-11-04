@@ -56,7 +56,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aap1q"]
 size = Vector2(24, 20.5)
 
-[node name="Obstaculo" type="Area2D"]
+[node name="Obstaculo" type="Area2D" groups=["Dangerous"]]
+scale = Vector2(0.781531, 0.767388)
 script = ExtResource("1_ulk6u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

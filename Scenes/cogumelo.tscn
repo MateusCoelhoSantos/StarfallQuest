@@ -70,14 +70,14 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tfh1m"]
 height = 34.0
 
-[node name="Cogumelo" type="Area2D"]
+[node name="Cogumelo" type="Area2D" groups=["Dangerous"]]
 script = ExtResource("1_1b2b2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_er0ni")
 animation = &"Run"
 autoplay = "Run"
-frame_progress = 0.162492
+frame_progress = 0.739912
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

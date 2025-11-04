@@ -70,16 +70,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1fy1"]
 size = Vector2(30, 17)
 
-[node name="OlhoVoador" type="Area2D"]
+[node name="OlhoVoador" type="Area2D" groups=["Dangerous"]]
 script = ExtResource("1_4vp5c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_p24tr")
 animation = &"Fly"
 autoplay = "Fly"
-frame_progress = 0.484318
+frame_progress = 0.523725
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 3.5)
+position = Vector2(-3, 3)
 shape = SubResource("RectangleShape2D_m1fy1")

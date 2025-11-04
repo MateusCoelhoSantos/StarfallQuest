@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dfg4xde47u6ug"]
+[gd_scene load_steps=34 format=3 uid="uid://dfg4xde47u6ug"]
 
 [ext_resource type="Script" uid="uid://qjfydt2tbj20" path="res://Scripts/Player.gd" id="1_hhvu8"]
 [ext_resource type="Texture2D" uid="uid://xtnitj4y4j2x" path="res://Assets/Personagem Starfall/Adventurer/Individual Sprites/adventurer-idle-00.png" id="2_g1sy3"]
@@ -136,6 +136,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("22_627xd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_03oth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_j4apf")
 }],
 "loop": true,
 "name": &"slide",
@@ -157,19 +163,32 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i8wdj"]
-radius = 7.0
-height = 28.0
+radius = 5.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n72wg"]
+radius = 5.0
+height = 22.0
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.9, 0.9)
 collision_mask = 3
 script = ExtResource("1_hhvu8")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vftnq")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
+frame_progress = 0.385266
 
-[node name="collision" type="CollisionShape2D" parent="."]
+[node name="collision_Physics" type="CollisionShape2D" parent="."]
+position = Vector2(4, 3)
 shape = SubResource("CapsuleShape2D_i8wdj")
 
-[node name="animator" type="AnimationPlayer" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Collision_objects" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(4, 3)
+shape = SubResource("CapsuleShape2D_n72wg")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

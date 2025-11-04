@@ -1,20 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnyenyotp7q7h"]
+[gd_scene load_steps=9 format=3 uid="uid://dnyenyotp7q7h"]
 
 [ext_resource type="Script" uid="uid://ct16s1vkbqv33" path="res://Scripts/main.gd" id="1_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://c1uu2c4djui3d" path="res://Scenes/Level2.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://filrsela105u" path="res://Scenes/Level1.tscn" id="3_8gbba"]
 [ext_resource type="PackedScene" uid="uid://dfg4xde47u6ug" path="res://Actors/player.tscn" id="3_dku4y"]
 [ext_resource type="Script" uid="uid://bajtccy3avhu4" path="res://Scripts/spawn_manager.gd" id="5_kry3j"]
+[ext_resource type="FontFile" uid="uid://dbhk66eyst1bt" path="res://Assets/Fontes/RevMiniPixel.ttf" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://bvxk1v8wggwv6" path="res://Scenes/fimde_jogo_layer.tscn" id="7_6bp64"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6bp64"]
+font = ExtResource("6_21xkr")
+font_color = Color(1, 1, 0, 1)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_jjvhh")
 
 [node name="Player" parent="." instance=ExtResource("3_dku4y")]
-position = Vector2(66, 219)
+visibility_layer = 3
+position = Vector2(17, 135)
 
-[node name="ParallaxBackground" parent="." instance=ExtResource("2_bo1nx")]
+[node name="Level1" parent="." instance=ExtResource("3_8gbba")]
 
-[node name="BG" parent="." instance=ExtResource("3_8gbba")]
+[node name="Level2" parent="." instance=ExtResource("2_bo1nx")]
 visible = false
 
 [node name="SpawnManager" type="Node2D" parent="."]
@@ -23,5 +30,19 @@ script = ExtResource("5_kry3j")
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LabelScore" type="Label" parent="CanvasLayer"]
+offset_left = 188.0
+offset_top = 5.0
+offset_right = 256.0
+offset_bottom = 21.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_6bp64")
+metadata/_edit_use_anchors_ = true
+
+[node name="FimdeJogoLayer" parent="." instance=ExtResource("7_6bp64")]
+visible = false
 
 [connection signal="timeout" from="SpawnTimer" to="SpawnManager" method="_on_spawn_timer_timeout"]
