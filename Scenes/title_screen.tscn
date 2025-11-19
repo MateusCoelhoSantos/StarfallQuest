@@ -1,10 +1,50 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt4gkimjrqqm7"]
+[gd_scene load_steps=10 format=3 uid="uid://bcbmf5v3aymip"]
 
-[ext_resource type="Script" uid="uid://dc5ehh1xmw4lw" path="res://Scripts/title_screen.gd" id="1_55kwv"]
+[ext_resource type="Script" path="res://Scripts/title_screen.gd" id="1_55kwv"]
 [ext_resource type="Texture2D" uid="uid://cd4roy671mvas" path="res://Assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/_Complete_static_BG_(288 x 208).png" id="1_twnyg"]
 [ext_resource type="FontFile" uid="uid://cg54n4i02ak3g" path="res://Assets/Daydream DEMO.otf" id="2_55kwv"]
-[ext_resource type="Theme" uid="uid://bl4gtjk7brgki" path="res://Scenes/bnt_theme.tres" id="3_12m1t"]
+[ext_resource type="Theme" uid="uid://dh335hb5ajqwb" path="res://Scenes/bnt_theme.tres" id="3_12m1t"]
 [ext_resource type="Texture2D" uid="uid://cde5u2018riat" path="res://Assets/Personagem Starfall/Adventurer-Hand-Combat/Individual Sprites/adventurer-run2-03.png" id="4_6vd4x"]
+[ext_resource type="FontFile" uid="uid://dbhk66eyst1bt" path="res://Assets/Fontes/RevMiniPixel.ttf" id="5_12m1t"]
+
+[sub_resource type="Animation" id="Animation_12m1t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bg:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/HBoxContainer/mochi:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_55kwv"]
 resource_name = "reveal"
@@ -46,45 +86,6 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_12m1t"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("bg:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MarginContainer:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MarginContainer/HBoxContainer/mochi:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6vd4x"]
 _data = {
 &"RESET": SubResource("Animation_12m1t"),
@@ -93,17 +94,20 @@ _data = {
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
+anchor_right = 0.668
+anchor_bottom = 0.671
+offset_right = 237.616
+offset_bottom = 169.432
+scale = Vector2(0.667514, 0.670694)
+script = ExtResource("1_55kwv")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_55kwv")
-
-[node name="bg" type="TextureRect" parent="."]
-layout_mode = 2
-offset_right = 432.0
-offset_bottom = 310.0
 texture = ExtResource("1_twnyg")
 expand_mode = 2
 
@@ -130,7 +134,7 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_override_colors/font_color = Color(0.606992, 0.0877274, 4.81308e-08, 1)
 theme_override_fonts/font = ExtResource("2_55kwv")
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 24
 text = "starfall 
 quest"
 horizontal_alignment = 1
@@ -139,11 +143,13 @@ vertical_alignment = 1
 [node name="Start_bnt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_12m1t")
+theme_override_fonts/font = ExtResource("5_12m1t")
 text = "JOGAR"
 
 [node name="Quit_bnt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_12m1t")
+theme_override_fonts/font = ExtResource("5_12m1t")
 text = "SAIR"
 
 [node name="mochi" type="TextureRect" parent="MarginContainer/HBoxContainer"]

@@ -7,7 +7,7 @@ const ESTRELA = preload("res://Scenes/estrela.tscn")
 
 const ground_y = 170
 const obstaculo_y = 185
-const flying_min_y = 140
+const flying_min_y = 160
 const flying_max_y = 90
 const estrela_y = 175
 

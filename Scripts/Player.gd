@@ -36,6 +36,12 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Dangerous"):
 		var main = get_tree().get_current_scene()
 		main.on_player_died()
-		
+	
 	elif area.is_in_group("Collectible"):
+		GameManager.star += 1
+		print(GameManager.star)
+		#if coletaveis_coletados >= MAX_COLETAVEIS:
+			#ativar_invulnerabilidade()
+		## Zera a contagem para o próximo ciclo
+			#coletaveis_coletados = 0
 		area.queue_free()

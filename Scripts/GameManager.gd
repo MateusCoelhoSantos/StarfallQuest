@@ -11,6 +11,9 @@ var max_obj_speed := 500.0
 var obj_acceleration := 2.0
 
 var high_score = 0
+var star := 0
+var tempo_invulnerabilidade = 5.0 # Segundos de invulnerabilidade
+const MAX_COLETAVEIS = 5
 
 func _ready():
 	load_high_score()

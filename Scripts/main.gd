@@ -3,10 +3,15 @@ extends Node2D
 var score := 0.0
 @onready var label_score: Label = $CanvasLayer/LabelScore
 @onready var fimde_jogo_layer: CanvasLayer = $FimdeJogoLayer
+@onready var label_star: Label = $CanvasLayer/LabelStar
+
+func _ready() -> void:
+	label_star.text = str(GameManager.star)
 
 func _process(delta: float) -> void:
 	score += delta * 5
-	label_score.text = "Score: " + str(int(score))     
+	label_score.text = "Score: " + str(int(score)) 
+	label_star.text = "Stars: " + str(int(GameManager.star))    
 
 func _physics_process(delta):
 	if GameManager.obj_speed < GameManager.max_obj_speed:

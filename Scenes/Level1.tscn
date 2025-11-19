@@ -107,7 +107,7 @@ shape = SubResource("RectangleShape2D_t3or0")
 tile_set = SubResource("TileSet_kylad")
 format = 2
 
-[node name="Layer0" type="TileMapLayer" parent="TileMap"]
+[node name="Layer1" type="TileMapLayer" parent="TileMap"]
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAAAAwAAAAEAAEAAAABAAwAAAAEAAEAAAACAAwAAAAEAAEAAAADAAwAAAAEAAEAAAAEAAwAAAAEAAEAAAAFAAwAAAAEAAEAAAAGAAwAAAAEAAEAAAAHAAwAAAAEAAEAAAAIAAwAAAAEAAEAAAAJAAwAAAAEAAEAAAAKAAwAAAAEAAEAAAALAAwAAAAEAAEAAAAMAAwAAAAEAAEAAAANAAwAAAAEAAEAAAAOAAwAAAAEAAEAAAAPAAwAAAAEAAEAAAAQAAwAAAAEAAEAAAARAAwAAAAEAAEAAAA=")
 tile_set = SubResource("TileSet_kylad")

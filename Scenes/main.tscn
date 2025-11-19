@@ -20,9 +20,9 @@ visibility_layer = 3
 position = Vector2(17, 135)
 
 [node name="Level1" parent="." instance=ExtResource("3_8gbba")]
+visible = false
 
 [node name="Level2" parent="." instance=ExtResource("2_bo1nx")]
-visible = false
 
 [node name="SpawnManager" type="Node2D" parent="."]
 script = ExtResource("5_kry3j")
@@ -39,6 +39,15 @@ offset_top = 5.0
 offset_right = 256.0
 offset_bottom = 21.0
 text = "Score: 0"
+label_settings = SubResource("LabelSettings_6bp64")
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelStar" type="Label" parent="CanvasLayer"]
+offset_left = 18.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 21.0
+text = "Star: 0"
 label_settings = SubResource("LabelSettings_6bp64")
 metadata/_edit_use_anchors_ = true
 
